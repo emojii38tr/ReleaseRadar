@@ -3,7 +3,7 @@ import { Song, ViewState, AppSettings } from './types';
 import { fetchNewReleases } from './services/geminiService';
 import { ReleaseCard } from './components/ReleaseCard';
 import { StreamModal } from './components/StreamModal';
-import { HomeIcon, HeartIcon, CogIcon } from './components/Icons';
+import { HomeIcon, HeartIcon, CogIcon, RadarIcon } from './components/Icons';
 
 const GENRES = ['Alle', 'Pop', 'Hip Hop', 'Electronic', 'Rock', 'R&B', 'K-Pop', 'Latin'];
 
@@ -93,9 +93,12 @@ export default function App() {
       {/* Header & Genre Filter */}
       <div className="sticky top-0 bg-zinc-950/90 backdrop-blur-md z-10 py-4 -mx-4 px-4 border-b border-zinc-800/50">
         <div className="flex items-center justify-between mb-4">
-            <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-600">
-            ReleaseRadar
-            </h1>
+            <div className="flex items-center space-x-2">
+                <RadarIcon className="w-6 h-6 text-pink-500" />
+                <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-600">
+                ReleaseRadar
+                </h1>
+            </div>
              <button 
                 onClick={() => loadSongs(selectedGenre)}
                 className="p-2 bg-zinc-800 rounded-full hover:bg-zinc-700 transition"
