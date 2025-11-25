@@ -1,0 +1,5 @@
+{
+  "name": "ReleaseRadar",
+  "description": "Entdecke weltweit neue Musik-Releases, kategorisiert nach Genre. Finde direkte Links zu deinen Streaming-Diensten.",
+  "requestFramePermissions": []
+}
